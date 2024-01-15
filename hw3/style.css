@@ -1,0 +1,185 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.contact::before {
+    content: '';
+    display: inline-block;
+    margin-right: 10px;
+    width: 1rem;
+    height: 1rem;
+    background-size: cover;
+}
+
+/* Header styles */
+
+/* For the quote element with the class name main-quote */
+.main-quote {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #8C92AC;
+}
+
+/* For the <header> with the class name main-header */
+.main-header {
+    background-image: linear-gradient(99.9deg, rgba(27,24,31,1) 21.2%, rgba(50,4,89,1) 84.8%);
+    background-color: purple;
+    color: #fff;
+    padding: 2rem;
+}
+
+/* For the element with the class name avatar-figure */
+.avatar-figure {
+    background-image: url('images/stars.jpg');
+    background-color: rgb(47, 47, 91);
+    background-size: cover;
+    margin: 0;
+    padding: 1rem;
+}
+
+/* For the <img> tag inside the <figure> with the class name avatar-figure */
+.avatar-figure img {
+    border: 3px solid #fff;
+}
+
+/* For the <ul> tag with the class name contacts */
+.contacts {
+    max-width: 50%;
+    padding: 1rem;
+    border: 3px solid #fff;
+    color: #fff;
+}
+
+/* For the <li> tag inside the <ul> tag with the class name contacts */
+.contacts li {
+    list-style: none;
+    display: inline-block;
+}
+
+/* For <a> tags with the class name contact to a visited state */
+a.contact:visited {
+    color: rgb(128, 128, 128);
+}
+
+/* For <a> tags with the class name contact to an active state */
+a.contact:active {
+    color: rgb(151, 154, 170);
+}
+
+/* For the before pseudo-element of a tag with the class name contact-phone */
+.contact-phone::before {
+    background: url('images/phone-call.svg');
+}
+
+/* For the before pseudo-element of a tag with the class name contact-inst */
+.contact-inst::before {
+    background: url('images/instagram-logo.svg');
+}
+
+/* For the before pseudo-element of a tag with the class name contact-twitter */
+.contact-twitter::before {
+    background: url('images/twitter.svg');
+}
+
+/* For an <h1> tag on the page */
+h1 {
+    padding-bottom: 30px;
+    border-bottom: 3px solid rgb(112, 128, 144);
+}
+
+/* Sections and Section Summary styles */
+
+/* For all <section> tags */
+section {
+    padding: 2rem;
+}
+
+/* For the <section> with the class name summary */
+.summary {
+    padding: 2rem;
+    text-shadow: 1px 1px 2px pink;
+}
+
+/* For tags with the class name space */
+.space {
+    background: url('images/rocket_big.png') no-repeat center, url('images/space.jpg') no-repeat bottom center;
+    float: left;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+/* Work experience section */
+.work-experience {
+    margin-top: 2rem;
+}
+
+/* For a <table> element */
+.work-experience-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid purple;
+}
+
+/* For the column with the class name work-experience-years-row */
+.work-experience-years-col {
+    width: 15%;
+}
+
+/* For the column with the class name work-experience-job-title-row */
+.work-experience-job-title-col {
+    width: 20%;
+}
+
+/* For the column with the class name work-experience-comment-row */
+.work-experience-comment-col {
+    width: 65%;
+}
+
+/* For all <th> */
+.work-experience-table th {
+    letter-spacing: 2px;
+    padding: 20px;
+    text-align: left;
+}
+
+/* For all <td> */
+.work-experience-table td {
+    letter-spacing: 1px;
+    padding: 20px;
+    text-align: left;
+}
+
+/* For all <th> inside <tfoot> */
+.work-experience-table tfoot th {
+    text-align: right;
+}
+
+/* For all <thead> and <tfoot> */
+.work-experience-table thead,
+.work-experience-table tfoot {
+    background-image: url('images/leopardskin.jpg');
+    color: #fff;
+    text-shadow: 1px 1px 1px black;
+}
+
+/* For a <caption> */
+.work-experience-table caption {
+    padding: 20px;
+    text-align: right;
+    color: #666;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+/* For a <footer> with the class name main-footer */
+.main-footer {
+    background-image: linear-gradient(99.9deg, rgba(27,24,31,1) 21.2%, rgba(50,4,89,1) 84.8%);
+    background-color: purple;
+    color: #fff;
+    padding: 2rem;
+}
