@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main-header {
+    padding: 10px;
+    border: 3px solid darkblue;
+}
+
+.main-heading {
+    font-style: italic;
+    text-decoration: underline dotted;
+}
+
+section {
+    padding: 10px;
+    margin-top: 10px;
+}
+/* Combinators selectors */
+
+/* To the <section> element with the class name tech */
+section.tech {
+    border: 3px solid darkolivegreen;
+}
+
+/* To the <section> element with the class name spaceflight */
+section.spaceflight {
+    border: 3px solid darkmagenta;
+}
+
+/* To the <section> element with the class name science-astronomy */
+section.science-astronomy {
+    border: 3px solid darkcyan;
+}
+
+/* To the <h2> descendant of an element with the class name tech */
+.tech h2 {
+    color: darkgrey;
+}
+
+/* To the <h2> element that is a direct child of the <header> element */
+header > h2 {
+    padding-left: 10px;
+    border-left: 3px solid darksalmon;
+}
+
+/* To the <nav> element that immediately follows the <h1> element */
+h1 + nav {
+    border-left: 4px solid;
+}
+
+/* To the element with the class name main-footer that follows an element with the id main-header on any level */
+#main-header ~ .main-footer {
+    padding: 10px;
+    margin-top: 10px;
+    border: 3px solid darkkhaki;
+}
+
+/* To the <ul> element that is a direct child of an element with the class name main-navigation */
+.main-navigation > ul {
+    list-style: none;
+    padding-left: 15px;
+}
+/* Combinators selectors */
+
+/* To the <section> element with the class name tech */
+section.tech {
+    border: 3px solid darkolivegreen;
+}
+
+/* To the <section> element with the class name spaceflight */
+section.spaceflight {
+    border: 3px solid darkmagenta;
+}
+
+/* To the <section> element with the class name science-astronomy */
+section.science-astronomy {
+    border: 3px solid darkcyan;
+}
+
+/* To the <h2> descendant of an element with the class name tech */
+.tech h2 {
+    color: darkgrey;
+}
+
+/* To the <h2> element that is a direct child of the <header> element */
+header > h2 {
+    padding-left: 10px;
+    border-left: 3px solid darksalmon;
+}
+
+/* To the <nav> element that immediately follows the <h1> element */
+h1 + nav {
+    border-left: 4px solid;
+}
+
+/* To the element with the class name main-footer that follows an element with the id main-header on any level */
+#main-header ~ .main-footer {
+    padding: 10px;
+    margin-top: 10px;
+    border: 3px solid darkkhaki;
+}
+
+/* To the <ul> element that is a direct child of an element with the class name main-navigation */
+.main-navigation > ul {
+    list-style: none;
+    padding-left: 15px;
+}
