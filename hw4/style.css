@@ -1,0 +1,84 @@
+:root {
+    --space-size: 20px;
+    --primary-color: #fd4f57;
+    --secondary-color: #00233d;
+}
+
+body,
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header, footer, main, aside {
+    box-sizing: border-box;
+}
+
+main {
+    overflow: hidden;
+    width: 70%;
+    float: left;
+    background-color: var(--primary-color);
+}
+
+aside {
+    height: 150vh;
+    width: 30%;
+    float: right;
+    background-color: var(--secondary-color);
+    position: relative;
+    z-index: 1;
+}
+
+.info {
+    height: 460px;
+    overflow: auto;
+    position: relative;
+}
+
+form {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+header {
+    width: 100%;
+    background-color: var(--primary-color);
+    z-index: 2;
+}
+
+.footer {
+    width: 100%;
+    background-color: var(--primary-color);
+}
+
+.client_stories {
+    margin: var(--space-size);
+    column-count: 3;
+    column-gap: 20px; /* змінено з var(--space-size) на 20px */
+}
+
+h2 {
+    width: 100%;
+    column-span: all;
+}
+
+.features {
+    background: var(--secondary-color);
+    padding-top: var(--space-size);
+    column-count: 2; /* додано для розділення на 2 колонки */
+}
+
+.header_line {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
