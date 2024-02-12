@@ -1,0 +1,230 @@
+:root {
+    --basic-background-image: linear-gradient(to right, #267871, #136a8a);
+    --basic-background-color: #136a8a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font: 1.2em/1.4 Arial, Helvetica, sans-serif;
+}
+
+body {
+    padding: 0 0 1em;
+}
+
+header {
+    background-image: var(--basic-background-image);
+    background-color: var(--basic-background-color);
+    color: #fff;
+    border: 5px solid #000;
+}
+
+header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 0.5em 1em;
+    border-top: 1px solid #fff;
+}
+
+header .title {
+    font-size: 150%;
+    font-style: italic;
+    font-weight: bold;
+    padding: 1em;
+}
+
+main {
+    padding: 0 1em;
+}
+
+.cards {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cards li {
+    border: 5px solid #000;
+    margin-bottom: 1em;
+}
+
+.cards h2 {
+    background-image: var(--basic-background-image);
+    background-color: var(--basic-background-color);
+    color: #fff;
+    margin: 0;
+    padding: 0.5em 1em;
+}
+
+.cards .inner {
+    padding: 0.5em 1em;
+}
+
+.sidebar {
+    background-image: var(--basic-background-image);
+    background-color: var(--basic-background-color);
+    border: 5px solid #000;
+    padding: 0.5em 1em;
+    margin-top: 1rem;
+    color: #fff;
+}
+
+section img {
+    display: block;
+    max-width: calc(100% - 1rem);
+}
+
+@media screen and (max-width: 530px) {
+    .cool-space-rocket img {
+        width: 80vw; 
+    }
+}
+  
+@media screen and (max-width: 730px) {
+    .cool-space-rocket img {
+        width: 70vw; 
+    }
+}
+  
+@media screen and (max-width: 1500px) {
+    .cool-space-rocket img {
+        width: 50vw; 
+    }
+}
+  
+@media screen and (min-width: 1501px) {
+    .cool-space-rocket img {
+        width: 1000px; 
+    }
+}
+
+@media screen and (min-width: 535px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    header ul {
+        display: flex;
+    }
+    
+    header a {
+        border-top: none;
+    }
+    
+    .sidebar {
+        margin-top: 0;
+    }
+}
+
+@media screen and (min-width: 730px) {
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: flex-start;
+        margin-bottom: 1rem;
+    }
+    
+    .cards li {
+        width: calc(50% - 0.5rem);
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 1010px) {
+    .cards li {
+        width: calc(33% - 0.5rem);
+    }
+}
+
+@media screen and (min-width: 1295px) {
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        padding: 1rem;
+    }
+    
+    .cards li {
+        width: calc(32% - 0.5rem);
+    }
+    
+    article p {
+        padding-right: 1rem;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .cards li:hover {
+        color: #6441A5;
+    }
+}
+
+.cool-space-rocket img {
+    width: 100%;
+}
+
+.cool-space-rocket picture {
+    display: block;
+}
+
+.cool-space-rocket source[srcset='images/rocket320.jpg'] {
+    srcset: 'images/rocket320.jpg';
+    sizes: 320w; 
+}
+
+.cool-space-rocket source[srcset='images/rocket640.jpg'] {
+    srcset: 'images/rocket640.jpg';
+    sizes: 640w;
+}
+
+.cool-space-rocket source[srcset='images/rocket1024.jpg'] {
+    srcset: 'images/rocket1024.jpg';
+    sizes: 1024w;
+}
+
+.cool-space-rocket source[srcset='images/rocket1280.jpg'] {
+    srcset: 'images/rocket1280.jpg';
+    sizes: 1280w;
+}
+
+.space-building picture {
+    display: block;
+}
+
+.space-building picture source {
+    srcset: url('images/space-building.webp') type('image/webp');
+}
+
+.nasa-astronaut {
+    display: block;
+}
+
+.nasa-astronaut img {
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .nasa-astronaut img {
+        srcset: url('images/astronaut-crop2.jpg');
+        sizes: 900px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .nasa-astronaut img {
+        srcset: url('images/astronaut-crop1.jpg');
+        sizes: 1400px;
+    }
+}
