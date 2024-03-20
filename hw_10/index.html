@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typewriter Animation</title>
+  <style>
+    #app {
+      text-align: center;
+      font-size: 50px;
+      background-image: linear-gradient(
+        -225deg,
+        #231557 0%,
+        #44107a 29%,
+        #ff1361 67%,
+        #fff800 100%
+      );
+      background-clip: border-box;
+      text-fill-color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-fill-color: transparent;
+      animation: textclip 2s linear infinite;
+    }
+
+    @keyframes textclip {
+      to {
+        background-position: 200% center;
+      }
+    }
+
+    * {
+      font-family: Helvetica;
+      color: white;
+    }
+
+    :root {
+      --headingSize: 55px;
+      --background-color: black;
+    }
+
+    body {
+      margin: 0;
+      margin-top: 60px;
+      display: block;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      height: 100vh;
+      background-color: var(--background-color);
+    }
+
+    h1 {
+      margin: 0;
+      letter-spacing: -1px;
+      font-size: var(--headingSize);
+    }
+
+    .container {
+      margin-top: 20px;
+      width: 50%;
+    }
+
+    span {
+      overflow: hidden;
+      animation: .3s swift-up ease-in-out forwards;
+    }
+
+    i {
+      font-style: normal;
+      position: relative;
+      top: var(--headingSize);
+      animation: .5s swift-up ease-in-out forwards;
+    }
+
+    @keyframes swift-up {
+      to {
+        top: 0;
+      }
+    }
+
+    @media screen and (max-width: 1000px) {
+      .container {
+        width: auto;
+        margin: 0 10%;
+      }
+
+      :root {
+        --headingSize: 35px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div id="app"></div>
+
+<section class="container">
+  <h1 class="swift-up-text">This text is the only example of css practice</h1>
+</section>
+
+<script>
+  const app = document.getElementById('app');
+  const textArray = ['Front-End Developer', 'Web Developer', 'Web Designer'];
+  let index = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function type() {
+    const currentText = textArray[index];
+    const speed = isDeleting ? 50 : 150;
+
+    if (charIndex < currentText.length && !isDeleting) {
+      app.innerHTML += currentText.charAt(charIndex);
+      charIndex++;
+      setTimeout(type, speed);
+    } else if (charIndex > 0 && isDeleting) {
+      app.innerHTML = currentText.substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(type, speed);
+    } else {
+      isDeleting = !isDeleting;
+      setTimeout(type, 1000);
+      if (!isDeleting) {
+        index = (index + 1) % textArray.length;
+      }
+    }
+  }
+
+  window.onload = type;
+
+  const swiftUpElements = document.querySelectorAll('.swift-up-text');
+
+  swiftUpElements.forEach(elem => {
+
+    const words = elem.textContent.split(' ');
+    elem.innerHTML = '';
+
+    words.forEach((el, index) => {
+      words[index] = `<span><i>${words[index]}</i></span>`;
+    });
+
+    elem.innerHTML = words.join(' ');
+
+    const children = document.querySelectorAll('span > i');
+    children.forEach((node, index) => {
+      node.style.animationDelay = `${index * .2}s`;
+    });
+
+  });
+</script>
+
+</body>
+</html>
